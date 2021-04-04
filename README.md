@@ -11,6 +11,6 @@ pat 算法题解（乙级居多）
 [排序](./1025_A_sort.cpp)<br>
 [贪心](./greed.cpp)<br>
 [散列](./hash.cpp)<br>
-[二分查找](./two_point)<br>
+[二分查找](./two_point.cpp)<br>
 [快速幂](./quick.cpp)<br>
 [two pointers](./two_pointers.cpp)
