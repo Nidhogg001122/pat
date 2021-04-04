@@ -8,7 +8,7 @@ pat 算法题解（乙级居多）
 ~~主要是我懒得编测试集~~,<br>
 <img src="./picture.jpg"/><br>
 ---
-##知识点目录:##<br>
+**知识点目录:**<br>
 [排序](./1025_A_sort.cpp)<br>
 [贪心](./greed.cpp)<br>
 [散列](./hash.cpp)<br>
