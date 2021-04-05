@@ -9,7 +9,7 @@ pat 算法题解（乙级居多）
 <img src="./picture.jpg"/><br>
 ---
 **知识点目录:**<br>
-[排序](./1025_A_sort.cpp)<br>
+[排序](./sort.cpp)<br>
 [贪心](./greed.cpp)<br>
 [散列](./hash.cpp)<br>
 [二分查找](./two_point.cpp)<br>
