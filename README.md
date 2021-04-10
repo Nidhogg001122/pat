@@ -9,10 +9,10 @@ pat 算法题解（乙级居多）
 <img src="./picture.jpg"/><br>
 ---
 **知识点目录:**<br>
-[排序](./sort.cpp)<br>
 [贪心](./greed.cpp)<br>
 [散列](./hash.cpp)<br>
 [二分查找](./two_point.cpp)<br>
 [快速幂](./quick.cpp)<br>
-[two pointers](./two_pointers.cpp)
-
+[two pointers](./two_pointers.cpp)<br>
+[排序](./sort.cpp)<br>
+[快速选择](./quickCh)
