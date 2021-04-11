@@ -15,4 +15,5 @@ pat 算法题解（乙级居多）
 [快速幂](./quick.cpp)<br>
 [two pointers](./two_pointers.cpp)<br>
 [排序](./sort.cpp)<br>
-[快速选择](./quickCh.cpp)
+[快速选择](./quickCh.cpp)<br>
+[最大公约数和最小公倍数](./maxAndMin.cpp)
