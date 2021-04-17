@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	char num[1001];
+	char num[1001];		//注意数据应该较大于测试极限
 	int result[1001];
 	char c;
 	int sum = 0;
@@ -16,7 +16,7 @@ int main() {
 	num[i] = '\0';
 	i = 0;
 	while (num[i] != '\0') {
-		sum += num[i++] - 48;
+		sum += num[i++] - 48;	//字符转为数字
 	}
 	while (sum > 0) {
 		i = sum % 10;
@@ -25,7 +25,7 @@ int main() {
 	}
 	j = j - 1;
 	while (j >= 0) {
-		switch (result[j]) {
+		switch (result[j]) {	//其实最难的反而是写对拼音
 		case 0:
 		{
 			printf("ling");
