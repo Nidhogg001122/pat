@@ -1,28 +1,27 @@
 #include <iostream>
 #include <cstring>
-#include <algorithm>
+
+//这题不难，纯属PAT在scanf返回值上要求严格，可以使用cin和cout
+
 using namespace std;
-struct Stu {
+struct stuData {
 	string name;
 	string id;
 	int score;
-}stu[1010];
+}student[1010];
 
-bool cmp(Stu a, Stu b)
-{
-	if (a.score != b.score)
-		return a.score > b.score;
-}
 int main()
 {
-	int n;
+	int n, i, min = 0, max = 0;
 	cin >> n;
-	for (int i = 0; i < n; i++)
-	{
-		cin >> stu[i].name >> stu[i].id >> stu[i].score;
+	for (i = 0; i < n; i++) {
+		cin >> student[i].name >> student[i].id >> student[i].score;
 	}
-	sort(stu, stu + n, cmp);
-	cout << stu[0].name << " " << stu[0].id << endl;
-	cout << stu[n - 1].name << " " << stu[n - 1].id << endl;
+	for (i = 0; i < n; i++) {
+		if (student[max].score < student[i].score) max = i;
+		if (student[min].score > student[i].score) min = i;
+	}
+	cout << student[max].name << " " << student[max].id << endl;
+	cout << student[min].name << " " << student[min].id << endl;
 	return 0;
 }
