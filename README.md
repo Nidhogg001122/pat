@@ -22,4 +22,5 @@ pat 算法题解（乙级居多）
 [最大公约数和最小公倍数](./maxAndMin.cpp)<br>
 [分数运算及表示](./Fraction.cpp)<br>
 [素数](./primeNumber.cpp)<br>
-[质因子分解](./primeDisassemble.cpp)
+[质因子分解](./primeDisassemble.cpp)<br>
+[高精度四则运算](./bigNum.cpp)
