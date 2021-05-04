@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-	char info[4][64];
+	char info[4][64];	//è®°å½•å¥å­
 	int week, hour, min;
 	int i = 0, j = 0;
 	for (i = 0; i < 4; i++) {
@@ -13,7 +13,7 @@ int main() {
 	char temp;
 	for (i = 0; i < strlen(info[0]) && i < strlen(info[1]); i++) {
 		temp = info[0][i];
-		if (temp >= 'A' && temp <= 'G') {
+		if (temp >= 'A' && temp <= 'G') {	//å¯»æ‰¾ç¬¬ä¸€å¯¹ç›¸åŒçš„å¤§å†™å­—æ¯ï¼Œå·²çŸ¥ä¸€å‘¨ä¸ƒå¤©ï¼Œä»…æ¯”è¾ƒåˆ°G
 			if (temp == info[1][i]) {
 				week = temp - 'A' + 1;
 				break;
@@ -21,7 +21,7 @@ int main() {
 		}
 	}
 
-	for (j = i + 1; j < strlen(info[0]) && j < strlen(info[1]); j++) {
+	for (j = i + 1; j < strlen(info[0]) && j < strlen(info[1]); j++) {	//ç”±é¢˜æ„ï¼Œåœ¨æ‰¾åˆ°æ˜ŸæœŸåç»§ç»­å¯»æ‰¾ç¬¬äºŒå¯¹ç›¸åŒæ•°å­—æˆ–å¤§å†™å­—æ¯
 		temp = info[0][j];
 		if (temp == info[1][j]) {
 			if (temp >= '0' && temp <= '9') {
@@ -34,7 +34,7 @@ int main() {
 			}
 		}
 	}
-	for (i = 0; i < strlen(info[2]) && i < strlen(info[3]); i++) {
+	for (i = 0; i < strlen(info[2]) && i < strlen(info[3]); i++) {		//å¯»æ‰¾ç›¸åŒå­—æ¯
 		temp = info[2][i];
 		if (temp >= 'A' && temp <= 'z') {
 			if (temp == info[3][i]) {
@@ -43,7 +43,7 @@ int main() {
 			}
 		}
 	}
-	//MON ±íÊ¾ĞÇÆÚÒ»£¬TUE ±íÊ¾ĞÇÆÚ¶ş£¬WED ±íÊ¾ĞÇÆÚÈı£¬THU ±íÊ¾ĞÇÆÚËÄ£¬FRI ±íÊ¾ĞÇÆÚÎå£¬SAT ±íÊ¾ĞÇÆÚÁù£¬SUN ±íÊ¾ĞÇÆÚÈÕ
+	//MON è¡¨ç¤ºæ˜ŸæœŸä¸€ï¼ŒTUE è¡¨ç¤ºæ˜ŸæœŸäºŒï¼ŒWED è¡¨ç¤ºæ˜ŸæœŸä¸‰ï¼ŒTHU è¡¨ç¤ºæ˜ŸæœŸå››ï¼ŒFRI è¡¨ç¤ºæ˜ŸæœŸäº”ï¼ŒSAT è¡¨ç¤ºæ˜ŸæœŸå…­ï¼ŒSUN è¡¨ç¤ºæ˜ŸæœŸæ—¥
 	switch (week)
 	{
 	case 1: {
