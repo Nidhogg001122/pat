@@ -4,9 +4,7 @@
 using namespace std;
 
 typedef struct data {
-	char address[8];
-	int num;
-	char next[8];
+	int address, num, next;
 }linkdata;
 
 linkdata link[100010];
@@ -14,32 +12,31 @@ linkdata temp[100010];
 
 int main() {
 	int  total, change;
-	char first[8];
-	cin >> first >> total >> change;
-	int i = 0, j = 0;
-	for (i = 0; i < total; i++) cin >> temp[i].address >> temp[i].num >> temp[i].next;
-	for (i = 0; i < total; i++) {
-		if (!strcmp(temp[i].address, first)) {
-			link[0] = temp[i];
-			break;
-		}
+	linkdata mid;
+	int first;
+	if (!scanf("%d %d %d", &first, &total, &change)) return -1;
+	int i = 0, j = 0, k = 0;
+	while (i < total) {
+		scanf("%d", &j);
+		scanf("%d %d", &temp[j].num, &temp[j].next);
+		i++;
 	}
-	for (i = 0; i < total - 1; i++) {
-		for (j = 0; j < total; j++) {
-			if (!strcmp(temp[j].address, link[i].next)) {
-				link[i + 1] = temp[j];
-				break;
+	for (j = 0, i = first; j < total; j++) {
+		link[j].address = i;
+		link[j].num = temp[i].num;
+		if (j + 1 == change) {
+			for (k = 0; k < change / 2; k++) {
+				mid = link[j - k];
+				link[j - k] = link[k];
+				link[k] = mid;
 			}
 		}
+		if (temp[i].next == -1) break;
+		i = temp[i].next;
 	}
-	if(change) strcpy_s(link[0].next, link[change - 1].next);
-	for (i = 1; i < change; i++) strcpy_s(link[i].next, link[i - 1].address);
-	for (i = 0; i < change; i++) temp[i] = link[i];
-	for (j = 0, i = change - 1; i >= 0; i--, j++) {
-		strcpy_s(link[i].address, temp[j].address);
-		strcpy_s(link[i].next, temp[j].next);
-		link[i].num = temp[j].num;
+	for (k = 0; k < j; k++) {
+		printf("%05d %d %05d\n", link[k].address, link[k].num, link[k + 1].address);
 	}
-	for (i = 0; i < total; i++) cout << link[i].address << ' ' << link[i].num << ' ' << link[i].next << endl;
+	printf("%5d %d -1\n", link[k].address, link[k].num);
 	return 0;
 }
